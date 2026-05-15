@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Groupe BS Bâtiment — Rénovation de façades & toitures</title>
+  <meta name="description" content="Groupe BS Bâtiment, spécialiste haut de gamme de la rénovation de façades et toitures en Haute-Garonne et départements voisins." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    smoothWheel: true,
+    wheelMultiplier: 0.9,
+    touchMultiplier: 1.1,
+    easing: function (t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+</head>
+<body>
+  <main class="site-shell">
+    <section class="hero" aria-label="Accueil Groupe BS Bâtiment">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/videopaye60.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__veil"></div>
+      <header class="navbar">
+        <a class="brand" href="#" aria-label="Groupe BS Bâtiment - accueil">
+          <span class="brand__mark">BS</span>
+          <span class="brand__text">
+            <strong>Groupe BS</strong>
+            <small>Bâtiment</small>
+          </span>
+        </a>
+
+        <nav class="navlinks" aria-label="Navigation principale">
+          <a href="#" class="is-active">Accueil</a>
+          <a href="#prestations">Prestations</a>
+          <a href="#realisations">Réalisations</a>
+          <a href="#apropos">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn btn--gold navbar__cta" href="#contact">Demander un devis</a>
+      </header>
+
+      <div class="hero__content">
+        <p class="eyebrow">Rénovation de façades & toitures</p>
+        <h1>L’excellence pour<br><em>vos façades & toitures</em></h1>
+        <p class="hero__lead">
+          Rénovation, protection et valorisation de votre habitat avec exigence,
+          précision et savoir-faire.
+        </p>
+
+        <div class="hero__actions" aria-label="Actions principales">
+          <a class="btn btn--gold" href="#prestations">Découvrir nos services</a>
+          <a class="btn btn--ghost" href="#contact">Obtenir un devis</a>
+        </div>
+      </div>
+
+      <!-- <div class="showcase" aria-hidden="true">
+        <article class="showcase-card showcase-card--left">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="" />
+          <span>Façades d’exception</span>
+        </article>
+
+        <div class="chips chips--left">
+          <span class="chip"><i>✓</i> Garantie décennale</span>
+          <span class="chip"><i>↔</i> Avant / Après</span>
+        </div>
+
+        <div class="chips chips--right">
+          <span class="chip"><i>✦</i> Finitions haut de gamme</span>
+          <span class="chip"><i>⌁</i> Intervention rapide</span>
+        </div>
+
+        <article class="showcase-card showcase-card--right">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="" />
+          <span>Toitures durables</span>
+        </article>
+      </div>-->
+    </section>
+
+    <section class="stats" aria-label="Chiffres clés">
+      <div class="stat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/><path d="m8.8 12 2.2 2.2 4.5-5"/></svg>
+        <div>
+          <strong>10+</strong>
+          <span>ans d’expérience</span>
+        </div>
+      </div>
+
+      <div class="stat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg>
+        <div>
+          <strong>250+</strong>
+          <span>chantiers réalisés</span>
+        </div>
+      </div>
+
+      <div class="stat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div>
+          <strong>98%</strong>
+          <span>clients satisfaits</span>
+        </div>
+      </div>
+
+      <div class="stat stat--location">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <div>
+          <strong>Haute-Garonne</strong>
+          <span>& départements voisins</span>
+        </div>
+      </div>
+    </section>
+    <section class="craft-section" id="savoir-faire">
+  <div class="craft-card">
+    <img
+      class="craft-card__image"
+      src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=88"
+      alt="Maison rénovée avec façade élégante et éclairage extérieur"
+      loading="lazy"
+    />
+
+    <div class="craft-card__content">
+      <p class="section-kicker">Rénover, protéger, valoriser</p>
+
+      <h2>
+        Le savoir-faire<br />
+        qui sublime <em>votre patrimoine</em>
+      </h2>
+
+      <p>
+        Des prestations haut de gamme pour préserver votre habitat,
+        valoriser votre façade et garantir une toiture saine, esthétique
+        et durable.
+      </p>
+
+      <span class="craft-card__line" aria-hidden="true"></span>
+
+      <div class="craft-card__points">
+        <span>Façades rénovées</span>
+        <span>Toitures protégées</span>
+        <span>Finitions soignées</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-hero">
+  <div class="about-hero__container">
+    
+    <div class="about-hero__content">
+      <div class="about-hero__eyebrow">
+        <span></span>
+        Notre entreprise
+      </div>
+
+      <h1>
+        Qui sommes-nous ?
+      </h1>
+
+      <h2>
+        L’expertise d’une entreprise engagée
+        <em>au service de votre habitat.</em>
+      </h2>
+
+      <p>
+        Spécialistes des façades, toitures et de la rénovation, nous mettons
+        notre savoir-faire au service de projets durables et esthétiques.
+      </p>
+
+      <p>
+        Chaque chantier est réalisé avec exigence, précision et respect des
+        matériaux, pour garantir des résultats à la hauteur de vos attentes.
+      </p>
+
+      <p>
+        Entreprise locale à taille humaine, nous plaçons la confiance, la qualité
+        et la satisfaction de nos clients au cœur de nos engagements.
+      </p>
+
+      <div class="about-hero__buttons">
+        <a href="#histoire" class="btn2 btn2--primary">
+          Découvrir notre histoire
+          <span>→</span>
+        </a>
+
+        <a href="#contact" class="btn2 btn2--secondary">
+          Nous contacter
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="about-hero__gallery">
+      <div class="about-hero__image about-hero__image--large">
+        <img src="images/batimentimg.avif" alt="Équipe sur un chantier de façade">
+      </div>
+
+      <div class="about-hero__image about-hero__image--small">
+        <img src="images/femmebtp.jpg" alt="Artisan travaillant sur un chantier">
+      </div>
+
+      <div class="about-hero__image about-hero__image--wide">
+        <img src="images/gbsbboys.png" alt="Maison rénovée contemporaine">
+      </div>
+
+      <div class="about-hero__image about-hero__image--tall">
+        <img src="images/maisondesign.png" alt="Façade en rénovation avec échafaudage">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="prestations-section" id="prestations">
+  <div class="section-heading">
+    <p class="section-kicker">Nos prestations</p>
+    <h2>Une expertise complète pour un habitat d’exception</h2>
+    <p>
+      Une approche précise, durable et esthétique pour chaque façade,
+      chaque toiture et chaque détail de votre maison.
+    </p>
+  </div>
+
+  <div class="prestations-grid">
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=86"
+          alt="Façade de maison rénovée"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 20V9l8-5 8 5v11" />
+            <path d="M8 20v-7h8v7" />
+            <path d="M9 10h.01M15 10h.01" />
+          </svg>
+        </span>
+
+        <h3>Ravalement de façade</h3>
+        <p>Redonnez éclat, protection et valeur à votre maison.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1620641622317-d2a7ec872e6d?auto=format&fit=crop&w=900&q=86"
+          alt="Toiture en tuiles rénovée"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 12 12 5l9 7" />
+            <path d="M6 11v9h12v-9" />
+            <path d="M9 20v-5h6v5" />
+          </svg>
+        </span>
+
+        <h3>Réfection de toiture</h3>
+        <p>Des toitures solides, étanches et pensées pour durer.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1600573472591-ee6981cf35b6?auto=format&fit=crop&w=900&q=86"
+          alt="Nettoyage de façade"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3s6 6.1 6 11a6 6 0 0 1-12 0c0-4.9 6-11 6-11Z" />
+            <path d="M9.5 15.5c.7 1.2 1.6 1.8 2.8 1.8" />
+          </svg>
+        </span>
+
+        <h3>Nettoyage &amp; traitement</h3>
+        <p>Élimination des mousses, lichens et salissures.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=900&q=86"
+          alt="Maison avec toiture et façade haut de gamme"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+            <path d="M7 4v16M17 4v16" />
+          </svg>
+        </span>
+
+        <h3>Isolation &amp; étanchéité</h3>
+        <p>Confort thermique optimal et économies d’énergie.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=86"
+          alt="Surface protégée contre l’humidité"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3 5 8v5c0 4.6 3 7.9 7 9 4-1.1 7-4.4 7-9V8l-7-5Z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+        </span>
+
+        <h3>Hydrofuge &amp; protection</h3>
+        <p>Traitements performants contre l’humidité et les intempéries.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=86"
+          alt="Détail architectural de toiture"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 16h16" />
+            <path d="M6 16v4h12v-4" />
+            <path d="M7 12l5-7 5 7" />
+            <path d="M9 12h6" />
+          </svg>
+        </span>
+
+        <h3>Zinguerie &amp; finitions</h3>
+        <p>Des détails soignés pour une longévité assurée.</p>
+        <a href="#contact">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="process-section3" id="methode">
+  <div class="process-bg3"></div>
+
+  <div class="process-container3">
+    <div class="process-header3">
+      <div class="eyebrow3">
+        <span></span>
+        Notre méthode
+      </div>
+
+      <h2>Les étapes de votre projet</h2>
+
+      <p>
+        Un accompagnement rigoureux et personnalisé, de la première rencontre
+        jusqu’à la livraison de votre habitat d’exception.
+      </p>
+    </div>
+
+    <div class="process-grid3">
+
+      <article class="process-card3">
+        <div class="process-number3">01</div>
+
+        <div class="process-card-content3">
+          <h3>Phase de Consultation et d’Étude</h3>
+          <div class="process-line3"></div>
+
+          <ul>
+            <li>
+              <strong>Premier Contact</strong>
+              <span>Rencontre initiale avec le client pour comprendre ses besoins, ses attentes et son budget.</span>
+            </li>
+            <li>
+              <strong>Étude de Faisabilité</strong>
+              <span>Analyse des contraintes techniques, architecturales et réglementaires du projet.</span>
+            </li>
+            <li>
+              <strong>Élaboration du Cahier des Charges</strong>
+              <span>Définition précise des exigences du projet, y compris les matériaux, les délais et les coûts.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="process-card3">
+        <div class="process-number3">02</div>
+
+        <div class="process-card-content3">
+          <h3>Conception et Planification</h3>
+          <div class="process-line3"></div>
+
+          <ul>
+            <li>
+              <strong>Conception</strong>
+              <span>Création de plans détaillés et de spécifications techniques avec les architectes et ingénieurs.</span>
+            </li>
+            <li>
+              <strong>Obtention des Autorisations</strong>
+              <span>Aide à l’obtention des autorisations nécessaires : déclaration préalable, permis de construire.</span>
+            </li>
+            <li>
+              <strong>Planification</strong>
+              <span>Établissement d’un calendrier détaillé avec les étapes clés et les contraintes du site.</span>
+            </li>
+            <li>
+              <strong>Estimation des Coûts</strong>
+              <span>Préparation d’un devis détaillé et d’un budget prévisionnel.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="process-card3">
+        <div class="process-number3">03</div>
+
+        <div class="process-card-content3">
+          <h3>Coordination et Gestion de Projet</h3>
+          <div class="process-line3"></div>
+
+          <ul>
+            <li>
+              <strong>Sélection des Sous-traitants</strong>
+              <span>Choix des entreprises spécialisées pour chaque aspect du projet.</span>
+            </li>
+            <li>
+              <strong>Gestion des Contrats</strong>
+              <span>Négociation et signature des contrats avec les sous-traitants.</span>
+            </li>
+            <li>
+              <strong>Supervision des Travaux</strong>
+              <span>Surveillance continue pour assurer le respect des délais, des coûts et des normes de qualité.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="process-card3">
+        <div class="process-number3">04</div>
+
+        <div class="process-card-content3">
+          <h3>Exécution et Suivi</h3>
+          <div class="process-line3"></div>
+
+          <ul>
+            <li>
+              <strong>Mise en Œuvre</strong>
+              <span>Début des travaux selon le calendrier établi.</span>
+            </li>
+            <li>
+              <strong>Mise en Place de la Sécurité</strong>
+              <span>Installation des dispositifs de sécurité : échafaudages, filets de protection.</span>
+            </li>
+            <li>
+              <strong>Suivi de Projet</strong>
+              <span>Réunions régulières avec le client et les sous-traitants pour suivre l’avancement.</span>
+            </li>
+            <li>
+              <strong>Gestion des Changements</strong>
+              <span>Adaptation du plan initial en cas de modifications ou d’imprévus.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="process-card3 process-card3--wide">
+        <div class="process-number3">05</div>
+
+        <div class="process-card-content3">
+          <h3>Livraison et Clôture</h3>
+          <div class="process-line3"></div>
+
+          <ul class="process-list-horizontal3">
+            <li>
+              <strong>Inspection Finale</strong>
+              <span>Vérification que tous les travaux sont conformes aux spécifications et aux normes de qualité.</span>
+            </li>
+            <li>
+              <strong>Remise des Clés</strong>
+              <span>Livraison officielle du projet au client.</span>
+            </li>
+            <li>
+              <strong>Garantie et Suivi Post-projet</strong>
+              <span>Services de garantie et de suivi pour assurer la satisfaction du client à long terme.</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="process-values3">
+      <div class="value-item3">
+        <div class="value-icon3">✓</div>
+        <div>
+          <h4>Transparence</h4>
+          <p>Des échanges clairs à chaque étape.</p>
+        </div>
+      </div>
+
+      <div class="value-item3">
+        <div class="value-icon3">★</div>
+        <div>
+          <h4>Qualité</h4>
+          <p>Des standards élevés pour des réalisations durables.</p>
+        </div>
+      </div>
+
+      <div class="value-item3">
+        <div class="value-icon3">⌛</div>
+        <div>
+          <h4>Respect des délais</h4>
+          <p>Une planification maîtrisée et un suivi rigoureux.</p>
+        </div>
+      </div>
+
+      <div class="value-item3">
+        <div class="value-icon3">♡</div>
+        <div>
+          <h4>Satisfaction client</h4>
+          <p>Votre confiance, notre plus belle réalisation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="realisations-section4" id="realisations">
+  <div class="realisations-container4">
+
+    <div class="realisations-header4">
+      <div class="eyebrow4">
+        <span></span>
+        Nos réalisations
+      </div>
+
+      <h2>Nos Réalisations</h2>
+
+      <p>
+        Découvrez quelques projets emblématiques réalisés avec exigence,
+        précision et savoir-faire.
+      </p>
+    </div>
+
+    <div class="realisations-grid4">
+
+      <article class="realisation-card4">
+        <div class="realisation-image4">
+          <img src="images/realisation1.png" alt="Ravalement de façade">
+        </div>
+
+        <div class="realisation-content4">
+          <div class="realisation-icon4">
+            <span>⌂</span>
+          </div>
+
+          <div>
+            <h3>Ravalement de façade</h3>
+            <p>Restauration, protection et mise en valeur de votre façade.</p>
+
+            <a href="#contact" class="realisation-link4">
+              Voir le projet
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="realisation-card4">
+        <div class="realisation-image4">
+          <img src="images/toiture.png" alt="Travaux de couverture">
+        </div>
+
+        <div class="realisation-content4">
+          <div class="realisation-icon4">
+            <span>⌂</span>
+          </div>
+
+          <div>
+            <h3>Couverture</h3>
+            <p>Travaux de couverture et zinguerie pour une toiture durable.</p>
+
+            <a href="#contact" class="realisation-link4">
+              Voir le projet
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="realisation-card4">
+        <div class="realisation-image4">
+          <img src="images/corde.png" alt="Travaux sur corde">
+        </div>
+
+        <div class="realisation-content4">
+          <div class="realisation-icon4">
+            <span>⌁</span>
+          </div>
+
+          <div>
+            <h3>Corde</h3>
+            <p>Interventions en hauteur par cordistes qualifiés et certifiés.</p>
+
+            <a href="#contact" class="realisation-link4">
+              Voir le projet
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="realisations-button-wrap4">
+      <a href="#contact" class="btn4">
+        Voir toutes nos réalisations
+        <span>+</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+  </main>
+</body>
+</html>
+
