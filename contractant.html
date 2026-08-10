@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contractant.css" />
+    <script src="transition.js" defer></script>
     <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
 </head>
 
 <body>
+  <div class="page-transition"></div>
     <!--<div class="cursor-halo"></div>-->
     <main class="site-shell">
         <!--<div class="site-halo" aria-hidden="true"></div>-->
@@ -32,6 +34,7 @@
           <a href="#prestations">Prestations</a>
           <a href="realisation.html" ">Réalisations</a>
           <a href="contractant.html" class="is-active" >Contractants</a>
+          <a href="histoire.html">Histoire</a>
           <a href="contact.html">Contact</a>
         </nav>
         
@@ -102,36 +105,59 @@
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Ravalement de façades</h3>
-            <div class="process-line3"></div>
-            <p>Remettre à neuf l’apparence des façades tout en préservant leur structure.</p>
+            <div class="process-number3">01</div>
+
+            <div class="service-card-content">
+              <h3>Ravalement de façades</h3>
+              <div class="process-line3"></div>
+
+              <p>Remettre à neuf l’apparence des façades tout en préservant leur structure.</p>
             <ul>
               <li>Diagnostic préalable</li>
               <li>Réparation des fissures</li>
               <li>Enduits et peinture de finition</li>
             </ul>
+            </div>
+            
+
+            
+
           </article>
 
           <article class="service-card">
-            <h3>Nettoyage et traitement</h3>
+            <div class="process-number3">02</div>
+
+            <div class="service-card-content">
+              <h3>Nettoyage et traitement</h3>
             <div class="process-line3"></div>
+
             <p>Élimination des salissures, mousses, lichens ou graffitis.</p>
             <ul>
               <li>Hydrogommage</li>
               <li>Sablage doux</li>
               <li>Traitements hydrofuges</li>
             </ul>
+            </div>
+            
+            
           </article>
 
           <article class="service-card">
-            <h3>Isolation par l’extérieur</h3>
-            <div class="process-line3"></div>
-            <p>Amélioration des performances énergétiques du bâtiment.</p>
-            <ul>
-              <li>Pose d’isolants certifiés</li>
-              <li>Enduit de finition</li>
-              <li>Réduction des pertes thermiques</li>
-            </ul>
+            <div class="process-number3">03</div>
+
+            <div class="service-card-content">
+              <h3>Isolation par l’extérieur</h3>
+              <div class="process-line3"></div>
+
+              <p>Amélioration des performances énergétiques du bâtiment.</p>
+              <ul>
+                <li>Pose d’isolants certifiés</li>
+                <li>Enduit de finition</li>
+                <li>Réduction des pertes thermiques</li>
+              </ul>
+            </div>
+            
+            
           </article>
         </div>
       </div>
@@ -165,36 +191,51 @@
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Toitures en zinc</h3>
-            <div class="process-line3"></div>
-            <p>Installation et rénovation de toitures durables et esthétiques.</p>
-            <ul>
-              <li>Pose à joint debout</li>
-              <li>Pose à joints plats</li>
-              <li>Résistance à la corrosion</li>
-            </ul>
+            <div class="process-number3">01</div>
+
+            <div class="service-card-content">
+              <h3>Toitures en zinc</h3>
+
+              <p>Installation et rénovation de toitures durables et esthétiques.</p>
+              <ul>
+                <li>Pose à joint debout</li>
+                <li>Pose à joints plats</li>
+                <li>Résistance à la corrosion</li>
+              </ul>
+            </div>
+            
           </article>
 
           <article class="service-card">
-            <h3>Toitures en ardoise</h3>
-            <div class="process-line3"></div>
-            <p>Pose et restauration pour un rendu traditionnel et élégant.</p>
-            <ul>
-              <li>Pose clouée</li>
-              <li>Pose crochetée</li>
-              <li>Ardoise naturelle ou fibro-ciment</li>
-            </ul>
+            <div class="process-number3">02</div>
+            <div class="service-card-content">
+              <h3>Toitures en ardoise</h3>
+              <p>Pose et restauration pour un rendu traditionnel et élégant.</p>
+              <ul>
+                <li>Pose clouée</li>
+                <li>Pose crochetée</li>
+                <li>Ardoise naturelle ou fibro-ciment</li>
+              </ul>
+            </div>
+            
+
+            
           </article>
 
           <article class="service-card">
-            <h3>Zinguerie</h3>
-            <div class="process-line3"></div>
-            <p>Protection des façades et évacuation des eaux pluviales.</p>
-            <ul>
-              <li>Gouttières</li>
-              <li>Descentes d’eau</li>
-              <li>Habillage de cheminées</li>
-            </ul>
+            <div class="process-number3">03</div>
+            
+            <div class="service-card-content">
+
+              <h3>Zinguerie</h3>
+              <p>Protection des façades et évacuation des eaux pluviales.</p>
+              <ul>
+                <li>Gouttières</li>
+                <li>Descentes d’eau</li>
+                <li>Habillage de cheminées</li>
+              </ul>
+            </div>
+            
           </article>
         </div>
       </div>
@@ -227,25 +268,35 @@
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Accès difficile</h3>
-            <div class="process-line3"></div>
-            <p>Interventions sur façades, toitures ou structures complexes.</p>
-            <ul>
-              <li>Descente en rappel</li>
-              <li>Positionnement en suspension</li>
-              <li>Travail sécurisé en binôme</li>
-            </ul>
+            <div class="process-number3">01</div>
+
+            <div class="service-card-content">
+
+              <h3>Accès difficile</h3>
+              <p>Interventions sur façades, toitures ou structures complexes.</p>
+              <ul>
+                <li>Descente en rappel</li>
+                <li>Positionnement en suspension</li>
+                <li>Travail sécurisé en binôme</li>
+              </ul>
+            </div>
+            
           </article>
 
           <article class="service-card">
-            <h3>Applications</h3>
-            <div class="process-line3"></div>
-            <p>Réparation, nettoyage, inspection et maintenance.</p>
-            <ul>
-              <li>Réparation de façades</li>
-              <li>Nettoyage de surfaces élevées</li>
-              <li>Inspection technique</li>
-            </ul>
+            
+            <div class="process-number3">02</div>
+            <div class="service-card-content">
+
+              <h3>Applications</h3>
+                <p>Réparation, nettoyage, inspection et maintenance.</p>
+              <ul>
+                <li>Réparation de façades</li>
+                <li>Nettoyage de surfaces élevées</li>
+                <li>Inspection technique</li>
+              </ul>
+            </div>
+            
           </article>
         </div>
       </div>
@@ -277,25 +328,33 @@
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Cage d’escalier</h3>
-            <div class="process-line3"></div>
-            <p>Rénovation, mise en conformité et amélioration esthétique.</p>
-            <ul>
-              <li>Diagnostic structurel</li>
-              <li>Réparation des marches</li>
-              <li>Pose de garde-corps</li>
-            </ul>
+            <div class="process-number3">01</div>
+            <div class="service-card-content">
+              <h3>Cage d’escalier</h3>
+              <p>Rénovation, mise en conformité et amélioration esthétique.</p>
+              <ul>
+                <li>Diagnostic structurel</li>
+                <li>Réparation des marches</li>
+                <li>Pose de garde-corps</li>
+              </ul>
+            </div>
+            
           </article>
 
           <article class="service-card">
-            <h3>Reprise de cave</h3>
-            <div class="process-line3"></div>
-            <p>Renforcement des structures pour assurer la stabilité du bâtiment.</p>
-            <ul>
-              <li>Renforcement des fondations</li>
-              <li>Réparation des fissures</li>
-              <li>Poutres et piliers de soutien</li>
-            </ul>
+            <div class="process-number3">02</div>
+            <div class="service-card-content">
+
+              <h3>Reprise de cave</h3>
+            
+              <p>Renforcement des structures pour assurer la stabilité du bâtiment.</p>
+              <ul>
+                <li>Renforcement des fondations</li>
+                <li>Réparation des fissures</li>
+                <li>Poutres et piliers de soutien</li>
+              </ul>
+            </div>
+            
           </article>
         </div>
       </div>
@@ -347,6 +406,40 @@
       icon.classList.add("fa-bars");
     }
   });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+  // Petit délai pour être sûr que l'état initial
+  // du rideau ait bien été rendu
+  requestAnimationFrame(() => {
+    document.body.classList.add("page-loaded");
+  });
+});
+
+document.querySelectorAll('a[href]').forEach(link => {
+  link.addEventListener("click", event => {
+    const href = link.getAttribute("href");
+
+    // On ignore les ancres, liens externes, etc.
+    if (
+      !href ||
+      href.startsWith("#") ||
+      link.target === "_blank" ||
+      link.hostname !== window.location.hostname
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+
+    document.body.classList.remove("page-loaded");
+    document.body.classList.add("page-leaving");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 700);
+  });
+});
 </script>
 </main>
 </body>

@@ -1,0 +1,762 @@
+/* ================================
+   CONTRACTANTS / PRESTATIONS PAGE
+   ================================ */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.img{
+  object-fit: cover; /* L'image remplit le cadre sans être déformée (elle est rognée proprement) */
+  object-position: center;
+}
+
+.contractants-template {
+  --bg: #04090b;
+  --panel: rgba(8, 19, 22, 0.92);
+  --panel-soft: rgba(13, 29, 33, 0.86);
+  --panel-deep: rgba(3, 9, 11, 0.94);
+
+  --cream: #f5efe4;
+  --cream-soft: rgba(245, 239, 228, 0.74);
+  --cream-muted: rgba(245, 239, 228, 0.56);
+
+  --gold: #d6aa59;
+  --gold-light: #f0c879;
+  --gold-dark: #9b7430;
+
+  --line: rgba(214, 170, 89, 0.26);
+  --line-strong: rgba(214, 170, 89, 0.52);
+
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+
+  --page-x: clamp(1.25rem, 5vw, 4.5rem);
+  --max-width: 1120px;
+
+  --font-title: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-text: "Inter", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 18% 8%, rgba(214, 170, 89, 0.08), transparent 34%),
+    radial-gradient(circle at 78% 32%, rgba(214, 170, 89, 0.05), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    var(--bg);
+  background-size:
+    auto,
+    auto,
+    96px 96px,
+    96px 96px,
+    auto;
+  font-family: var(--font-text);
+}
+
+.contractants-template,
+.contractants-template * {
+  box-sizing: border-box;
+}
+
+.contractants-template a {
+  color: inherit;
+}
+
+.contractants-template svg {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========
+   HERO
+   ========= */
+
+.contract-hero {
+  position: relative;
+  min-height: clamp(540px, 72vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(6.5rem, 13vh, 11rem) var(--page-x) clamp(2.5rem, 5vw, 4.5rem);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.contract-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-image:
+    linear-gradient(90deg, rgba(4, 9, 11, 0.94) 0%, rgba(4, 9, 11, 0.62) 42%, rgba(4, 9, 11, 0.24) 72%, rgba(4, 9, 11, 0.62) 100%),
+    linear-gradient(0deg, rgba(4, 9, 11, 0.98) 0%, rgba(4, 9, 11, 0.32) 42%, rgba(4, 9, 11, 0.28) 100%),
+    var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.contract-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  z-index: -2;
+  background: linear-gradient(0deg, var(--bg), transparent);
+  pointer-events: none;
+}
+
+.contract-hero__inner {
+  width: min(var(--max-width), 100%);
+  margin-inline: auto;
+}
+
+.contract-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--gold-light);
+  font-size: clamp(0.74rem, 1vw, 0.86rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contract-hero__title {
+  margin: 0;
+  max-width: 1050px;
+  font-family: var(--font-title);
+  font-size: clamp(3.9rem, 8vw, 7.85rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.contract-hero__title span,
+.contract-hero__title em {
+  display: block;
+}
+
+.contract-hero__title span {
+  color: var(--cream);
+  text-shadow: 0 14px 40px rgba(0, 0, 0, 0.38);
+}
+
+.contract-hero__title em {
+  color: var(--gold-light);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  text-shadow: 0 14px 45px rgba(0, 0, 0, 0.42);
+}
+
+.contract-hero__line {
+  display: block;
+  width: clamp(72px, 10vw, 154px);
+  height: 1px;
+  margin-top: clamp(1.25rem, 2vw, 2rem);
+  background: linear-gradient(90deg, var(--gold-light), transparent);
+}
+
+.contract-hero__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 1.8vw, 1.25rem);
+  margin-top: clamp(1.5rem, 3.2vw, 2.7rem);
+}
+
+.contract-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  gap: 0.9rem;
+  padding: 0.85rem 1.45rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(14, 30, 34, 0.88), rgba(5, 13, 15, 0.82));
+  color: var(--cream);
+  text-decoration: none;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    background 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.contract-pill:hover {
+  transform: translateY(-3px);
+  border-color: rgba(240, 200, 121, 0.9);
+  background:
+    linear-gradient(135deg, rgba(22, 42, 46, 0.94), rgba(8, 18, 20, 0.92));
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, 0.36),
+    0 0 0 1px rgba(240, 200, 121, 0.05) inset;
+}
+
+.contract-pill__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  color: var(--gold-light);
+}
+
+.contract-pill__icon svg {
+  font-size: 34px;
+}
+
+.contract-pill span:last-child {
+  display: grid;
+  gap: 0.1rem;
+  font-size: 0.97rem;
+  font-weight: 500;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.contract-pill small {
+  display: block;
+  color: var(--cream-soft);
+  font-size: 0.82em;
+  font-weight: 400;
+}
+
+/* =========
+   SERVICES
+   ========= */
+
+.contract-services {
+  padding: clamp(2rem, 4.5vw, 3.75rem) var(--page-x) clamp(3rem, 6vw, 5.5rem);
+}
+
+.contract-services__inner {
+  width: min(var(--max-width), 100%);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(1rem, 1.6vw, 1.25rem);
+}
+
+.service-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(105px, 150px) minmax(0, 1.02fr) minmax(310px, 0.9fr);
+  align-items: stretch;
+  gap: clamp(1.15rem, 2.4vw, 2rem);
+  min-height: 330px;
+  padding: clamp(1rem, 2.2vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(214, 170, 89, 0.09), transparent 38%),
+    linear-gradient(135deg, rgba(11, 25, 29, 0.96), rgba(4, 12, 14, 0.96));
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  overflow: hidden;
+  scroll-margin-top: calc(var(--site-header-height, 90px) + 24px);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(240, 200, 121, 0.07), transparent 28%);
+  opacity: 0.9;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card--reverse {
+  grid-template-columns: minmax(310px, 0.9fr) minmax(0, 1.02fr) minmax(105px, 150px);
+}
+
+.service-card__index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.45rem);
+  padding-inline: 0.5rem;
+  border-right: 1px solid rgba(214, 170, 89, 0.14);
+}
+
+.service-card--reverse .service-card__index {
+  border-right: 0;
+  border-left: 1px solid rgba(214, 170, 89, 0.14);
+}
+
+.service-card__number {
+  font-family: var(--font-title);
+  font-size: clamp(5.4rem, 8vw, 7.4rem);
+  font-weight: 500;
+  line-height: 0.75;
+  color: rgba(240, 200, 121, 0.2);
+  letter-spacing: -0.08em;
+}
+
+.service-card__rule {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-light), transparent);
+}
+
+.service-card__icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--gold-light);
+  background: rgba(5, 13, 15, 0.62);
+}
+
+.service-card__icon svg {
+  font-size: 38px;
+}
+
+.service-card__copy {
+  align-self: center;
+  padding-block: clamp(0.35rem, 1.5vw, 1.2rem);
+}
+
+.service-card__copy h2 {
+  margin: 0 0 0.7rem;
+  max-width: 690px;
+  font-family: var(--font-title);
+  color: var(--cream);
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.service-card__copy h2 span {
+  font-size: 0.8em;
+  color: var(--cream-soft);
+}
+
+.service-card__copy p {
+  margin: 0;
+  max-width: 620px;
+  color: var(--cream-soft);
+  font-size: clamp(0.94rem, 1.1vw, 1.04rem);
+  line-height: 1.58;
+}
+
+.service-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--cream-soft);
+  font-size: clamp(0.9rem, 1vw, 0.98rem);
+  line-height: 1.5;
+}
+
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.67em;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--gold-light);
+  box-shadow: 0 0 14px rgba(240, 200, 121, 0.42);
+}
+
+.service-list strong {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.service-card__media {
+  align-self: stretch;
+  min-height: 280px;
+  margin: 0;
+  border: 1px solid rgba(214, 170, 89, 0.34);
+  border-radius: calc(var(--radius-lg) - 4px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.service-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: saturate(0.86) contrast(1.06) brightness(0.83);
+  transform: scale(1.015);
+}
+
+/* =========
+   CTA
+   ========= */
+
+.contract-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 310px) minmax(0, 1fr) minmax(290px, 360px);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
+  margin-top: clamp(1rem, 2vw, 1.4rem);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgba(240, 200, 121, 0.68);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 0% 20%, rgba(214, 170, 89, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(10, 24, 27, 0.96), rgba(3, 10, 12, 0.98));
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.contract-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(240, 200, 121, 0.08), transparent 36%);
+  pointer-events: none;
+}
+
+.contract-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contract-cta__visual {
+  min-height: 185px;
+  border-radius: calc(var(--radius-lg) - 4px);
+  background-image:
+    linear-gradient(90deg, rgba(4, 9, 11, 0.14), rgba(4, 9, 11, 0.75)),
+    var(--cta-bg);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(214, 170, 89, 0.28);
+}
+
+.contract-cta__content {
+  padding-block: 0.5rem;
+}
+
+.contract-cta__content h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-title);
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.contract-cta__content p {
+  margin: 0 0 1.35rem;
+  color: var(--cream-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contract-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  min-height: 50px;
+  padding: 0.95rem 1.75rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f3cb7d, #c8953c);
+  color: #081012;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    filter 240ms ease;
+}
+
+.contract-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.32);
+}
+
+.contract-button span {
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.contract-cta__benefits {
+  display: grid;
+  gap: 1.1rem;
+  padding-left: clamp(1rem, 2vw, 2rem);
+  border-left: 1px solid rgba(214, 170, 89, 0.26);
+}
+
+.contract-benefit {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.contract-benefit__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--gold-light);
+}
+
+.contract-benefit__icon svg {
+  font-size: 36px;
+}
+
+.contract-benefit h3 {
+  margin: 0 0 0.18rem;
+  color: var(--gold-light);
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.contract-benefit p {
+  margin: 0;
+  color: var(--cream-soft);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+/* =========
+   ANIMATIONS LÉGÈRES
+   ========= */
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity 680ms ease,
+    transform 760ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* =========
+   RESPONSIVE
+   ========= */
+
+@media (max-width: 1080px) {
+  .service-card,
+  .service-card--reverse {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-card__index,
+  .service-card--reverse .service-card__index {
+    order: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 0 1rem;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(214, 170, 89, 0.14);
+  }
+
+  .service-card__number {
+    font-size: clamp(4.1rem, 13vw, 6.4rem);
+  }
+
+  .service-card__icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .service-card__icon svg {
+    font-size: 30px;
+  }
+
+  .service-card__copy {
+    order: 1;
+  }
+
+  .service-card__media {
+    order: 2;
+    min-height: clamp(230px, 42vw, 390px);
+  }
+}
+
+@media (max-width: 980px) {
+  .contract-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .contract-cta__visual {
+    min-height: 230px;
+  }
+
+  .contract-cta__benefits {
+    padding-left: 0;
+    padding-top: 1.2rem;
+    border-left: 0;
+    border-top: 1px solid rgba(214, 170, 89, 0.26);
+  }
+}
+
+@media (max-width: 720px) {
+  .contract-hero {
+    min-height: 620px;
+    padding-top: 7rem;
+  }
+
+  .contract-hero__title {
+    font-size: clamp(3.05rem, 15vw, 4.8rem);
+  }
+
+  .contract-hero__pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x proximity;
+    margin-inline: calc(var(--page-x) * -1);
+    padding-inline: var(--page-x);
+    padding-bottom: 0.4rem;
+  }
+
+  .contract-hero__pills::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .contract-hero__pills::-webkit-scrollbar-thumb {
+    background: rgba(214, 170, 89, 0.45);
+    border-radius: 999px;
+  }
+
+  .contract-pill {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 250px;
+    justify-content: flex-start;
+  }
+
+  .service-card {
+    border-radius: 22px;
+  }
+
+  .service-card__copy h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .service-card__copy p,
+  .service-list li {
+    font-size: 0.92rem;
+  }
+
+  .contract-cta__visual {
+    min-height: 190px;
+  }
+
+  .contract-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .contractants-template {
+    --page-x: 1rem;
+  }
+
+  .contract-hero {
+    min-height: 590px;
+  }
+
+  .contract-eyebrow {
+    letter-spacing: 0.22em;
+  }
+
+  .contract-pill {
+    min-width: 235px;
+    padding-inline: 1rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card__index {
+    gap: 0.85rem;
+  }
+
+  .service-card__number {
+    font-size: 4rem;
+  }
+
+  .service-card__rule {
+    width: 36px;
+  }
+
+  .service-card__icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contract-benefit {
+    grid-template-columns: 38px 1fr;
+  }
+}
+
+/* Respect des préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible,
+  .contract-pill,
+  .contract-button {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

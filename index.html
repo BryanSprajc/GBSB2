@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
-  
+  <script src="transition.js" defer></script>
 <script>
   const lenis = new Lenis({
     duration: 1.2,
@@ -32,7 +32,9 @@
 </script>
 </head>
 <body>
+  <div class="page-transition"></div>
   <main class="site-shell">
+    
     <section class="hero" aria-label="Accueil Groupe BS Bâtiment">
       <video class="hero-video" autoplay muted loop playsinline>
         <source src="video/videopaye60.mp4" type="video/mp4" />
@@ -52,6 +54,7 @@
           <a href="#prestations">Prestations</a>
           <a href="realisation.html">Réalisations</a>
           <a href="contractant.html">Contractants</a>
+          <a href="histoire.html">Histoire</a>
           <a href="contact.html">Contact</a>
         </nav>
         
@@ -806,22 +809,171 @@
 
   </main>
 <script>
+  // Lightweight scroll reveal for text elements.
+  // Uses IntersectionObserver and CSS opacity/transform only.
+  (function () {
+    const canAnimate =
+      "IntersectionObserver" in window &&
+      window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+    if (!canAnimate) return;
+
+    const revealSelectors = [
+      ".hero__content .eyebrow",
+      ".hero__content h1",
+      ".hero__lead",
+      ".hero__actions",
+      ".stat div",
+      ".craft-card__content .section-kicker",
+      ".craft-card__content h2",
+      ".craft-card__content p:not(.section-kicker)",
+      ".craft-card__line",
+      ".craft-card__points span",
+      ".about-hero__eyebrow",
+      ".about-hero__content h1",
+      ".about-hero__content h2",
+      ".about-hero__content p",
+      ".about-hero__buttons",
+      ".section-heading .section-kicker",
+      ".section-heading h2",
+      ".section-heading > p:not(.section-kicker)",
+      ".service-card__body h3",
+      ".service-card__body p",
+      ".service-card__body a",
+      ".process-header3 .eyebrow3",
+      ".process-header3 h2",
+      ".process-header3 p",
+      ".process-number3",
+      ".process-card-content3 h3",
+      ".process-card-content3 li",
+      ".value-item3 h4",
+      ".value-item3 p",
+      ".realisations-header4 .eyebrow4",
+      ".realisations-header4 h2",
+      ".realisations-header4 p",
+      ".realisation-content4 h3",
+      ".realisation-content4 p",
+      ".realisation-link4",
+      ".realisations-button-wrap4",
+      ".contact-label7",
+      ".contact-title7",
+      ".contact-desc7",
+      ".contact-info-text7 > *",
+      ".contact-rdv-text7 > *",
+      ".contact-form-title7",
+      ".contact-field7",
+      ".contact-secure7"
+    ];
+
+    const revealGroups = [
+      ".hero__content",
+      ".stats",
+      ".craft-card__content",
+      ".about-hero__content",
+      ".section-heading",
+      ".prestations-grid",
+      ".process-header3",
+      ".process-grid3",
+      ".process-values3",
+      ".realisations-header4",
+      ".realisations-grid4",
+      ".contact-left7",
+      ".contact-form-card7"
+    ];
+
+    const targetSelector = revealSelectors.join(",");
+    const observedElements = new Set();
+
+    function prepareRevealElement(element, index) {
+      if (observedElements.has(element)) return;
+
+      const delay = Math.min(index * 55, 275);
+      element.classList.add("scroll-reveal");
+      element.style.setProperty("--reveal-delay", delay + "ms");
+      observedElements.add(element);
+    }
+
+    revealGroups.forEach(function (groupSelector) {
+      document.querySelectorAll(groupSelector).forEach(function (group) {
+        group.querySelectorAll(targetSelector).forEach(prepareRevealElement);
+      });
+    });
+
+    document.querySelectorAll(targetSelector).forEach(prepareRevealElement);
+
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.14,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    observedElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  })();
+
   const menuIcon = document.querySelector(".menu-icon");
   const navbar = document.querySelector(".navlinks");
 
-  menuIcon.addEventListener("click", () => {
-    navbar.classList.toggle("active");
+  if (menuIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
 
-    const icon = menuIcon.querySelector("i");
+      const icon = menuIcon.querySelector("i");
+      if (!icon) return;
 
-    if (navbar.classList.contains("active")) {
-      icon.classList.remove("fa-bars");
-      icon.classList.add("fa-xmark");
-    } else {
-      icon.classList.remove("fa-xmark");
-      icon.classList.add("fa-bars");
-    }
+      if (navbar.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+  }
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+  // Petit délai pour être sûr que l'état initial
+  // du rideau ait bien été rendu
+  requestAnimationFrame(() => {
+    document.body.classList.add("page-loaded");
   });
+});
+
+document.querySelectorAll('a[href]').forEach(link => {
+  link.addEventListener("click", event => {
+    const href = link.getAttribute("href");
+
+    // On ignore les ancres, liens externes, etc.
+    if (
+      !href ||
+      href.startsWith("#") ||
+      link.target === "_blank" ||
+      link.hostname !== window.location.hostname
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+
+    document.body.classList.remove("page-loaded");
+    document.body.classList.add("page-leaving");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 700);
+  });
+});
 </script>
 </body>
 </html>
