@@ -227,7 +227,7 @@ a {
 h1 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(54px, 8vw, 116px);
+  font-size: clamp(48px, 7vw, 100px);
   line-height: .96;
   font-weight: 600;
   letter-spacing: -.045em;

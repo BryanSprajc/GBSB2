@@ -34,49 +34,51 @@
 <body>
   <div class="page-transition"></div>
   <main class="site-shell">
+    <header class="navbar">
+      <a class="brand" href="#" aria-label="Groupe BS Bâtiment - accueil">
+        <!-- <span class="brand__mark">BS</span>
+        <span class="brand__text">
+          <strong>Groupe BS</strong>
+          <small>Bâtiment</small>
+        </span>-->
+      </a>
+
+      <nav class="navlinks" aria-label="Navigation principale">
+        <a href="#" class="is-active">Accueil</a>
+        <a href="contact.html">Prestations</a>
+        <a href="realisation.html">Réalisations</a>
+        <a href="contractant.html">Contractants</a>
+        <a href="histoire.html">Histoire</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <!--<a class="btn btn--gold navbar__cta" href="#contact">Demander un devis</a>-->
+    </header>
     
     <section class="hero" aria-label="Accueil Groupe BS Bâtiment">
       <video class="hero-video" autoplay muted loop playsinline>
         <source src="video/videopaye60.mp4" type="video/mp4" />
       </video>
       <div class="hero__veil"></div>
-      <header class="navbar">
-        <a class="brand" href="#" aria-label="Groupe BS Bâtiment - accueil">
-          <!-- <span class="brand__mark">BS</span> 
-          <span class="brand__text">
-            <strong>Groupe BS</strong>
-            <small>Bâtiment</small>
-          </span>-->
-        </a>
-
-        <nav class="navlinks" aria-label="Navigation principale">
-          <a href="#" class="is-active">Accueil</a>
-          <a href="#prestations">Prestations</a>
-          <a href="realisation.html">Réalisations</a>
-          <a href="contractant.html">Contractants</a>
-          <a href="histoire.html">Histoire</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        
-        <div class="menu-icon" id="menu-icon">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <!--<a class="btn btn--gold navbar__cta" href="#contact">Demander un devis</a>-->
-
-      </header>
-
       <div class="hero__content">
+        <img
+          class="hero__logo"
+          src="Logo/bsbVor.png"
+          alt="Logo Groupe BS Bâtiment"
+        />
         <p class="eyebrow">Rénovation de façades & toitures</p>
-        <h1>L’excellence pour<br><em>vos façades & toitures</em></h1>
+        <h1>Le patrimoine de demain<br><em>se rénove aujourd'hui</em></h1>
         <p class="hero__lead">
-          Rénovation, protection et valorisation de votre habitat avec exigence,
-          précision et savoir-faire.
+          Rénovation, protection et valorisation de votre habitat. Faire durer ce qui a de la valeur.
         </p>
-
+<!--
         <div class="hero__actions" aria-label="Actions principales">
           <a class="btn btn--gold" href="#prestations">Découvrir nos services</a>
           <a class="btn btn--ghost" href="#contact">Obtenir un devis</a>
-        </div>
+        </div>-->
       </div>
 
       <!-- <div class="showcase" aria-hidden="true">
@@ -122,8 +124,8 @@
       <div class="stat">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <div>
-          <strong>98%</strong>
-          <span>clients satisfaits</span>
+          <strong>1</strong>
+          <span>interlocuteur dédié par projet</span>
         </div>
       </div>
 
@@ -131,10 +133,11 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
         <div>
           <strong>Paris</strong>
-          <span>& départements voisins</span>
+          <span>& proche banlieue</span>
         </div>
       </div>
     </section>
+    <!--
     <section class="craft-section" id="savoir-faire">
   <div class="craft-card">
     <img
@@ -167,7 +170,7 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
 
 <section class="about-hero">
@@ -204,12 +207,12 @@
       </p>
 
       <div class="about-hero__buttons">
-        <a href="#histoire" class="btn2 btn2--primary">
+        <a href="histoire.html" class="btn2 btn2--primary">
           Découvrir notre histoire
           <span>→</span>
         </a>
 
-        <a href="#contact" class="btn2 btn2--secondary">
+        <a href="contact.html" class="btn2 btn2--secondary">
           Nous contacter
           <span>→</span>
         </a>
@@ -241,10 +244,10 @@
 <section class="prestations-section" id="prestations">
   <div class="section-heading">
     <p class="section-kicker">Nos prestations</p>
-    <h2>Une expertise complète pour un habitat d’exception</h2>
+    <h2>Une expertise complète pour un habitat unique</h2>
     <p>
       Une approche précise, durable et esthétique pour chaque façade,
-      chaque toiture et chaque détail de votre maison.
+      chaque toiture et chaque détail de votre immeuble, appartement ou maison.
     </p>
   </div>
 
@@ -269,7 +272,7 @@
 
         <h3>Ravalement de façade</h3>
         <p>Redonnez éclat, protection et valeur à votre maison.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
       </div>
     </article>
 
@@ -293,7 +296,31 @@
 
         <h3>Réfection de toiture</h3>
         <p>Des toitures solides, étanches et pensées pour durer.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
+      </div>
+    </article>
+    <article class="service-card">
+      <div class="service-card__media">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=86"
+          alt="Détail architectural de toiture"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="service-card__body">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 16h16" />
+            <path d="M6 16v4h12v-4" />
+            <path d="M7 12l5-7 5 7" />
+            <path d="M9 12h6" />
+          </svg>
+        </span>
+
+        <h3>Zinguerie &amp; finitions</h3>
+        <p>Des détails soignés pour une longévité assurée.</p>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
       </div>
     </article>
 
@@ -314,9 +341,9 @@
           </svg>
         </span>
 
-        <h3>Nettoyage &amp; traitement</h3>
-        <p>Élimination des mousses, lichens et salissures.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
+        <h3>Travaux à la corde</h3>
+        <p>Vide</p>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
       </div>
     </article>
 
@@ -339,9 +366,9 @@
           </svg>
         </span>
 
-        <h3>Isolation &amp; étanchéité</h3>
-        <p>Confort thermique optimal et économies d’énergie.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
+        <h3>Travaux d'intérieur</h3>
+        <p>Cage d'escalier, appartement</p>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
       </div>
     </article>
 
@@ -362,36 +389,13 @@
           </svg>
         </span>
 
-        <h3>Hydrofuge &amp; protection</h3>
-        <p>Traitements performants contre l’humidité et les intempéries.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
+        <h3>Travaux stucturels</h3>
+        <p>Caves, charpentes, reprise de sol de cour</p>
+        <a href="contractant.html">En savoir plus <span>→</span></a>
       </div>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__media">
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=86"
-          alt="Détail architectural de toiture"
-          loading="lazy"
-        />
-      </div>
 
-      <div class="service-card__body">
-        <span class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 16h16" />
-            <path d="M6 16v4h12v-4" />
-            <path d="M7 12l5-7 5 7" />
-            <path d="M9 12h6" />
-          </svg>
-        </span>
-
-        <h3>Zinguerie &amp; finitions</h3>
-        <p>Des détails soignés pour une longévité assurée.</p>
-        <a href="#contact">En savoir plus <span>→</span></a>
-      </div>
-    </article>
   </div>
 </section>
 <section class="process-section3" id="methode">
@@ -412,136 +416,55 @@
       </p>
     </div>
 
-    <div class="process-grid3">
+    <div class="process-grid3 process-grid3--summary">
 
-      <article class="process-card3">
+      <article class="process-card3 process-card3--summary">
         <div class="process-number3">01</div>
 
         <div class="process-card-content3">
           <h3>Phase de Consultation et d’Étude</h3>
-          <div class="process-line3"></div>
-
-          <ul>
-            <li>
-              <strong>Premier Contact</strong>
-              <span>Rencontre initiale avec le client pour comprendre ses besoins, ses attentes et son budget.</span>
-            </li>
-            <li>
-              <strong>Étude de Faisabilité</strong>
-              <span>Analyse des contraintes techniques, architecturales et réglementaires du projet.</span>
-            </li>
-            <li>
-              <strong>Élaboration du Cahier des Charges</strong>
-              <span>Définition précise des exigences du projet, y compris les matériaux, les délais et les coûts.</span>
-            </li>
-          </ul>
         </div>
       </article>
 
-      <article class="process-card3">
+      <article class="process-card3 process-card3--summary">
         <div class="process-number3">02</div>
 
         <div class="process-card-content3">
           <h3>Conception et Planification</h3>
-          <div class="process-line3"></div>
-
-          <ul>
-            <li>
-              <strong>Conception</strong>
-              <span>Création de plans détaillés et de spécifications techniques avec les architectes et ingénieurs.</span>
-            </li>
-            <li>
-              <strong>Obtention des Autorisations</strong>
-              <span>Aide à l’obtention des autorisations nécessaires : déclaration préalable, permis de construire.</span>
-            </li>
-            <li>
-              <strong>Planification</strong>
-              <span>Établissement d’un calendrier détaillé avec les étapes clés et les contraintes du site.</span>
-            </li>
-            <li>
-              <strong>Estimation des Coûts</strong>
-              <span>Préparation d’un devis détaillé et d’un budget prévisionnel.</span>
-            </li>
-          </ul>
         </div>
       </article>
 
-      <article class="process-card3">
+      <article class="process-card3 process-card3--summary">
         <div class="process-number3">03</div>
 
         <div class="process-card-content3">
           <h3>Coordination et Gestion de Projet</h3>
-          <div class="process-line3"></div>
-
-          <ul>
-            <li>
-              <strong>Sélection des Sous-traitants</strong>
-              <span>Choix des entreprises spécialisées pour chaque aspect du projet.</span>
-            </li>
-            <li>
-              <strong>Gestion des Contrats</strong>
-              <span>Négociation et signature des contrats avec les sous-traitants.</span>
-            </li>
-            <li>
-              <strong>Supervision des Travaux</strong>
-              <span>Surveillance continue pour assurer le respect des délais, des coûts et des normes de qualité.</span>
-            </li>
-          </ul>
         </div>
       </article>
 
-      <article class="process-card3">
+      <article class="process-card3 process-card3--summary">
         <div class="process-number3">04</div>
 
         <div class="process-card-content3">
           <h3>Exécution et Suivi</h3>
-          <div class="process-line3"></div>
-
-          <ul>
-            <li>
-              <strong>Mise en Œuvre</strong>
-              <span>Début des travaux selon le calendrier établi.</span>
-            </li>
-            <li>
-              <strong>Mise en Place de la Sécurité</strong>
-              <span>Installation des dispositifs de sécurité : échafaudages, filets de protection.</span>
-            </li>
-            <li>
-              <strong>Suivi de Projet</strong>
-              <span>Réunions régulières avec le client et les sous-traitants pour suivre l’avancement.</span>
-            </li>
-            <li>
-              <strong>Gestion des Changements</strong>
-              <span>Adaptation du plan initial en cas de modifications ou d’imprévus.</span>
-            </li>
-          </ul>
         </div>
       </article>
 
-      <article class="process-card3 process-card3--wide">
+      <article class="process-card3 process-card3--wide process-card3--summary">
         <div class="process-number3">05</div>
 
         <div class="process-card-content3">
           <h3>Livraison et Clôture</h3>
-          <div class="process-line3"></div>
-
-          <ul class="process-list-horizontal3">
-            <li>
-              <strong>Inspection Finale</strong>
-              <span>Vérification que tous les travaux sont conformes aux spécifications et aux normes de qualité.</span>
-            </li>
-            <li>
-              <strong>Remise des Clés</strong>
-              <span>Livraison officielle du projet au client.</span>
-            </li>
-            <li>
-              <strong>Garantie et Suivi Post-projet</strong>
-              <span>Services de garantie et de suivi pour assurer la satisfaction du client à long terme.</span>
-            </li>
-          </ul>
         </div>
       </article>
 
+    </div>
+
+    <div class="process-cta3">
+      <a href="methode.html" class="btn2 btn2--primary">
+        Découvrir toutes les étapes
+        <span>→</span>
+      </a>
     </div>
 
     <div class="process-values3">
@@ -698,7 +621,7 @@
           <div class="contact-info-text7">
             <span class="contact-info-label7">Téléphone</span>
             <span class="contact-info-value7 contact-gold7">01 42 86 78 90</span>
-            <span class="contact-info-sub7">Du lundi au vendredi, 9h – 18h</span>
+            <span class="contact-info-sub7">Du lundi au vendredi, 8h – 12h/14h – 18h</span>
           </div>
         </div>
         <div class="contact-info-card7">
@@ -710,7 +633,7 @@
           </div>
           <div class="contact-info-text7">
             <span class="contact-info-label7">Email</span>
-            <span class="contact-info-value7 contact-gold7">contact@excellencebat.fr</span>
+            <span class="contact-info-value7 contact-gold7">contact@gbsb.fr</span>
             <span class="contact-info-sub7">Réponse sous 24h ouvrées</span>
           </div>
         </div>
@@ -736,7 +659,7 @@
           </div>
           <div class="contact-info-text7">
             <span class="contact-info-label7">Horaires</span>
-            <span class="contact-info-value7">Lun – Ven : 9h – 18h</span>
+            <span class="contact-info-value7">Lun – Ven : 8h – 12h/14h - 18h</span>
             <span class="contact-info-sub7">Sam – Dim : Fermé</span>
           </div>
         </div>
@@ -819,6 +742,7 @@
     if (!canAnimate) return;
 
     const revealSelectors = [
+      ".hero__logo",
       ".hero__content .eyebrow",
       ".hero__content h1",
       ".hero__lead",
@@ -923,6 +847,20 @@
 
   const menuIcon = document.querySelector(".menu-icon");
   const navbar = document.querySelector(".navlinks");
+  const header = document.querySelector(".navbar");
+  const hero = document.querySelector(".hero");
+
+  function updateHeaderContrast() {
+    if (!header || !hero) return;
+
+    const headerBottom = header.getBoundingClientRect().bottom;
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    header.classList.toggle("is-past-hero", heroBottom <= headerBottom);
+  }
+
+  updateHeaderContrast();
+  window.addEventListener("scroll", updateHeaderContrast, { passive: true });
+  window.addEventListener("resize", updateHeaderContrast);
 
   if (menuIcon && navbar) {
     menuIcon.addEventListener("click", () => {
@@ -941,40 +879,5 @@
     });
   }
 </script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-  // Petit délai pour être sûr que l'état initial
-  // du rideau ait bien été rendu
-  requestAnimationFrame(() => {
-    document.body.classList.add("page-loaded");
-  });
-});
-
-document.querySelectorAll('a[href]').forEach(link => {
-  link.addEventListener("click", event => {
-    const href = link.getAttribute("href");
-
-    // On ignore les ancres, liens externes, etc.
-    if (
-      !href ||
-      href.startsWith("#") ||
-      link.target === "_blank" ||
-      link.hostname !== window.location.hostname
-    ) {
-      return;
-    }
-
-    event.preventDefault();
-
-    document.body.classList.remove("page-loaded");
-    document.body.classList.add("page-leaving");
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 700);
-  });
-});
-</script>
 </body>
 </html>
-

@@ -407,39 +407,5 @@
     }
   });
 </script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-  // Petit délai pour être sûr que l'état initial
-  // du rideau ait bien été rendu
-  requestAnimationFrame(() => {
-    document.body.classList.add("page-loaded");
-  });
-});
-
-document.querySelectorAll('a[href]').forEach(link => {
-  link.addEventListener("click", event => {
-    const href = link.getAttribute("href");
-
-    // On ignore les ancres, liens externes, etc.
-    if (
-      !href ||
-      href.startsWith("#") ||
-      link.target === "_blank" ||
-      link.hostname !== window.location.hostname
-    ) {
-      return;
-    }
-
-    event.preventDefault();
-
-    document.body.classList.remove("page-loaded");
-    document.body.classList.add("page-leaving");
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 700);
-  });
-});
-</script>
 </main>
 </body>
