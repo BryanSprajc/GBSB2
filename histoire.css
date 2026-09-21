@@ -38,8 +38,8 @@ body {
   background:
     radial-gradient(circle at 78% 8%, rgba(34, 67, 74, 0.28), transparent 34%),
     radial-gradient(circle at 18% 36%, rgba(24, 55, 59, 0.18), transparent 32%),
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px),
     var(--bg);
   background-size:
     auto,
@@ -787,7 +787,7 @@ em {
   left: 50%;
   bottom: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--gold);
   transform: translateX(-50%);
   transition: width .25s ease;
@@ -805,6 +805,24 @@ em {
 
 .navbar__cta {
   justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  text-decoration: none;
+  background: linear-gradient(135deg, #f5d58e, #d9a84f);
+  color: #071416;
+  box-shadow: 0 18px 45px rgba(217, 168, 79, 0.22);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-3px);
 }
 a {
   color: inherit;

@@ -34,7 +34,7 @@ body {
     linear-gradient(180deg, #020506 0%, #071119 52%, #05080b 100%);*/
     /*background-color: #121212;*/
   background-color: #05090c;  /* /!\ IMPORTANT : Ajoute un fond sombre pour voir les lignes blanches transparentes */
-background-image: linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.13) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
 background-size: 92px 92px;
 background-position: center center;
 overflow-x: hidden;
@@ -221,7 +221,7 @@ a {
   left: 50%;
   bottom: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--gold);
   transform: translateX(-50%);
   transition: width .25s ease;
